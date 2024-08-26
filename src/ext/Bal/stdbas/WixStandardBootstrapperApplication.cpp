@@ -4466,7 +4466,7 @@ LExit:
             themeControlWmNotifyResults.cbSize = sizeof(themeControlWmNotifyResults);
             themeControlWmNotifyResults.lResult = pResults->lResult;
 
-            hr = m_pfnBAFunctionsProc(BA_FUNCTIONS_MESSAGE_ONTHEMECONTROLWMCOMMAND, &themeControlWmNotifyArgs, &themeControlWmNotifyResults, m_pvBAFunctionsProcContext);
+            hr = m_pfnBAFunctionsProc(BA_FUNCTIONS_MESSAGE_ONTHEMECONTROLWMNOTIFY, &themeControlWmNotifyArgs, &themeControlWmNotifyResults, m_pvBAFunctionsProcContext);
             if (E_NOTIMPL != hr)
             {
                 BalExitOnFailure(hr, "BAFunctions OnThemeControlWmNotify failed.");
